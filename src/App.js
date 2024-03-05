@@ -29,7 +29,6 @@ const App = () => {
     if (prevValue === '') {
       setPrevValue(inputValue);
     } else {
-      const currentValue = prevValue || 0;
       const result = evaluate(prevValue, inputValue, operator);
 
       setDisplayValue(`${parseFloat(result.toFixed(7))}`);
@@ -68,7 +67,6 @@ const App = () => {
     if (prevValue === '') {
       return;
     } else {
-      const currentValue = prevValue || 0;
       const result = evaluate(prevValue, inputValue, operator);
 
       setDisplayValue(`${parseFloat(result.toFixed(7))}`);
